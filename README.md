@@ -1,5 +1,8 @@
 # nuxt-vues-axios-app
-Quick Vue App Set up with Vuex/Axios to retrieve and display posts (or anything else) from external API. Uses typicode but api/endpoint can be changed.
+Quick Vue App Set up with Vuex module/Axios to retrieve and display posts (or other data) from external API. Uses typicode but api/endpoint can be changed.
+
+Starter for Vue/Vuex/Axios apps
+
 ## Build Setup
 
 ```bash
