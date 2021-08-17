@@ -1,53 +1,58 @@
-export default {
-  // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
+const pkg = require('./package')
 
-  // Global page headers: https://go.nuxtjs.dev/config-head
+module.exports = {
+  mode: 'universal',
+
+  /*
+  ** Headers of the page
+  */
   head: {
-    title: 'nuxt-vues-axios-app',
-    htmlAttrs: {
-      lang: 'en'
-    },
+    title: pkg.name,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { hid: 'description', name: 'description', content: pkg.description }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-  ],
+  /*
+  ** Customize the progress-bar color
+  */
+  loading: { color: '#3B8070' },
 
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  /*
+  ** Global CSS
+  */
+  css: ['element-ui/lib/theme-chalk/index.css'],
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  /*
+  ** Plugins to load before mounting the App
+  */
+  plugins: ['@/plugins/element-ui'],
 
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-  ],
-
-  // Modules: https://go.nuxtjs.dev/config-modules
+  /*
+  ** Nuxt.js modules
+  */
   modules: [
-    // https://go.nuxtjs.dev/bootstrap
-    'bootstrap-vue/nuxt',
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
+    // Doc: https://github.com/nuxt-community/axios-module#usage
+    '@nuxtjs/axios'
   ],
-
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
+  /*
+  ** Axios module configuration
+  */
   axios: {
+    // See https://github.com/nuxt-community/axios-module#options
     baseURL: process.env.API_URL || 'https://jsonplaceholder.typicode.com'
   },
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
+  /*
+  ** Build configuration
+  */
   build: {
+    /*
+    ** You can extend webpack config here
+    */
+    extend(config, ctx) {}
   }
 }

@@ -1,19 +1,29 @@
 {
-  "name": "nuxt-vues-axios-app",
+  "name": "nuxt-blog",
   "version": "1.0.0",
+  "description": "My epic Nuxt.js project",
+  "author": "Haider Malik",
   "private": true,
   "scripts": {
+    "nuxt": "nuxt",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.13.6",
-    "bootstrap": "^4.6.0",
-    "bootstrap-vue": "^2.21.2",
-    "core-js": "^3.15.1",
-    "nuxt": "^2.15.7"
+    "@nuxtjs/axios": "^5.0.0",
+    "body-parser": "^1.18.3",
+    "cross-env": "^5.2.0",
+    "element-ui": "^2.4.6",
+    "nuxt": "^2.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-prettier": "2.6.2",
+    "json-server": "^0.16.3",
+    "nodemon": "^1.11.0",
+    "npm-run-all": "^4.1.3",
+    "prettier": "1.14.3"
+  }
 }
